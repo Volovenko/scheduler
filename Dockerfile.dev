@@ -1,0 +1,17 @@
+FROM ruby:3.4-slim
+
+RUN apt-get update -qq && \
+    apt-get install --no-install-recommends -y \
+    build-essential git libpq-dev libyaml-dev libvips-dev pkg-config postgresql-client \
+    && rm -rf /var/lib/apt/lists
+
+WORKDIR /scheduler
+
+ENV RAILS_ENV=development
+
+COPY Gemfile* ./
+RUN bundle install
+
+COPY . .
+
+CMD ["./bin/rails", "server", "-b", "0.0.0.0"]

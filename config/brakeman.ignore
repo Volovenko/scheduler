@@ -1,0 +1,14 @@
+{
+  "ignored_warnings": [
+    {
+      "fingerprint": "69ce14a3a62f347f53dcd4b15824579a536fcdba03053f0853e09454a1293f04",
+      "note": "All user input is sanitized via ActiveRecord::Base.connection.quote in sanitize_filters"
+    },
+    {
+      "fingerprint": "ac16ad134d15405cd356696fc9f8b23fa3702294e67addac8523df6fe282047c",
+      "note": "All user input is sanitized via ActiveRecord::Base.connection.quote in sanitize_filters"
+    }
+  ],
+  "updated": "2026-05-25",
+  "brakeman_version": "8.0.4"
+}
