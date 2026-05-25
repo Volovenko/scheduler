@@ -47,7 +47,7 @@ gem "dry-types"
 
 # Serialization and pagination
 gem "active_model_serializers"
-gem "pagy", "~> 9.0"
+gem "pagy", "~> 43.5"
 
 # Swagger UI / API docs server
 gem "rswag-ui"
