@@ -27,7 +27,12 @@ services:
       db:
         condition: service_healthy
     environment:
-      DATABASE_URL: postgres://scheduler:scheduler@db:5432/scheduler_development
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: scheduler
+      DB_PASSWORD: scheduler
+      DB_NAME: scheduler_development
+      DB_NAME_TEST: scheduler_test
 
 volumes:
   postgres_data:

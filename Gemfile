@@ -40,6 +40,25 @@ gem "thruster", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.2"
 
+# Dry ecosystem — validation, monads, types
+gem "dry-validation"
+gem "dry-monads"
+gem "dry-types"
+
+# Serialization and pagination
+gem "active_model_serializers"
+gem "pagy", "~> 9.0"
+
+# Swagger UI / API docs server
+gem "rswag-ui"
+gem "rswag-api"
+
+# Annotation of models with schema info (Ruby 3.x compatible fork of annotate)
+gem "annotaterb"
+
+# Environment variables
+gem "dotenv-rails"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
@@ -52,6 +71,17 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+  gem "faker"
+  gem "simplecov", require: false
+end
+
+group :test do
+  gem "shoulda-matchers"
+  gem "database_cleaner-active_record"
+  gem "rswag-specs"
 end
 
 group :development do

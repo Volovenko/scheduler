@@ -28,9 +28,9 @@
 
 Единый формат ошибок: `{ error: { code, message, details } }`. Обработка через concern в base_controller.
 
-Первый этап реализации
+Этапы реализации
 
-### 1. 
+### 1. CRUD задач
 
 Задача (Task) имеет: title, description, due_date (дата выполнения), status (pending/in_progress/completed/cancelled).
 
